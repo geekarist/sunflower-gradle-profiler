@@ -8,3 +8,5 @@
 /captures
 .externalNativeBuild
 ktlint
+/profile-out*
+/gradle-user-home/
