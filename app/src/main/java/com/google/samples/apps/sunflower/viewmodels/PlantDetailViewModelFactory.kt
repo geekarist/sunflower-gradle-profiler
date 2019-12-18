@@ -19,9 +19,9 @@ package com.google.samples.apps.sunflower.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-import com.google.samples.apps.sunflower.data.GardenPlantingRepository
+import com.google.samples.apps.sunflower.data.repo.GardenPlantingRepository
 import com.google.samples.apps.sunflower.data.Plant
-import com.google.samples.apps.sunflower.data.PlantRepository
+import com.google.samples.apps.sunflower.data.repo.PlantRepository
 
 /**
  * Factory for creating a [PlantDetailViewModel] with a constructor that takes a [PlantRepository]

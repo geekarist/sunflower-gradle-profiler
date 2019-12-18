@@ -48,3 +48,4 @@ interface GardenPlantingDao {
     @Delete
     suspend fun deleteGardenPlanting(gardenPlanting: GardenPlanting)
 }
+

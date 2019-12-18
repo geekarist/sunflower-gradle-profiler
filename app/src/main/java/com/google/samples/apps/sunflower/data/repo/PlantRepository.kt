@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.sunflower.data
+package com.google.samples.apps.sunflower.data.repo
+
+import com.google.samples.apps.sunflower.data.PlantDao
 
 /**
  * Repository module for handling data operations.
@@ -34,8 +36,12 @@ class PlantRepository private constructor(private val plantDao: PlantDao) {
         @Volatile private var instance: PlantRepository? = null
 
         fun getInstance(plantDao: PlantDao) =
-                instance ?: synchronized(this) {
-                    instance ?: PlantRepository(plantDao).also { instance = it }
+                instance
+                    ?: synchronized(this) {
+                    instance
+                        ?: PlantRepository(
+                            plantDao
+                        ).also { instance = it }
                 }
     }
 }

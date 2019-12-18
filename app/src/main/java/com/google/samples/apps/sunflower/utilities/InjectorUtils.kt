@@ -18,8 +18,8 @@ package com.google.samples.apps.sunflower.utilities
 
 import android.content.Context
 import com.google.samples.apps.sunflower.data.AppDatabase
-import com.google.samples.apps.sunflower.data.GardenPlantingRepository
-import com.google.samples.apps.sunflower.data.PlantRepository
+import com.google.samples.apps.sunflower.data.repo.GardenPlantingRepository
+import com.google.samples.apps.sunflower.data.repo.PlantRepository
 import com.google.samples.apps.sunflower.viewmodels.GardenPlantingListViewModelFactory
 import com.google.samples.apps.sunflower.viewmodels.PlantDetailViewModelFactory
 import com.google.samples.apps.sunflower.viewmodels.PlantListViewModelFactory

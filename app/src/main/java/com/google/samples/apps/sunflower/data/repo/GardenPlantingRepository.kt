@@ -14,14 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.sunflower.data
+package com.google.samples.apps.sunflower.data.repo
+
+import com.google.samples.apps.sunflower.data.GardenPlanting
+import com.google.samples.apps.sunflower.data.GardenPlantingDao
 
 class GardenPlantingRepository private constructor(
     private val gardenPlantingDao: GardenPlantingDao
 ) {
 
     suspend fun createGardenPlanting(plantId: String) {
-        val gardenPlanting = GardenPlanting(plantId)
+        val gardenPlanting =
+            GardenPlanting(plantId)
         gardenPlantingDao.insertGardenPlanting(gardenPlanting)
     }
 
@@ -40,8 +44,14 @@ class GardenPlantingRepository private constructor(
         @Volatile private var instance: GardenPlantingRepository? = null
 
         fun getInstance(gardenPlantingDao: GardenPlantingDao) =
-                instance ?: synchronized(this) {
-                    instance ?: GardenPlantingRepository(gardenPlantingDao).also { instance = it }
+                instance
+                    ?: synchronized(this) {
+                    instance
+                        ?: GardenPlantingRepository(
+                            gardenPlantingDao
+                        ).also { instance = it }
                 }
     }
 }
+
+
