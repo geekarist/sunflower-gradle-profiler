@@ -41,10 +41,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        debug {
-            // See https://developer.android.com/studio/build/optimize-your-build#disable-crashlytics-build-id
-            ext.alwaysUpdateBuildId = false
-        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
