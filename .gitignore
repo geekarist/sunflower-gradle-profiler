@@ -9,3 +9,6 @@
 .externalNativeBuild
 ktlint
 /profiling/tmp/
+/gradle-user-home/
+/profile-out*/
+profiling
